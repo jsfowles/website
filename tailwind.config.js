@@ -1,7 +1,12 @@
 const colors = require('./styles/colors');
 
 module.exports = {
-  purge: [],
+  mode: 'jit',
+  purge: [
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+    './pages/**/*.{js,jsx,ts,tsx,vue}',
+  ],
   presets: [],
   darkMode: 'class',
   theme: {
@@ -13,18 +18,52 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#FFFFFF',
+            a: {
+              color: '#FFFFFF',
+              textDecoration: 'none',
+              '&:hover': {
+                color: '#FFFFFF',
+              },
+            },
+          },
+        },
+      },
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        white: colors.white,
-        black: colors.black,
-        gray: colors.gray,
-        blue: colors.blue,
-        green: colors.green,
-        orange: colors.orange,
-        red: colors.red,
-        pink: colors.pink,
-        grayTones: colors.grayTones,
+        white: { DEFAULT: '#FFFFFF', dark: '#BBC5CF' },
+        black: {
+          DEFAULT: '#24242D',
+          dark: '#06020d',
+        },
+        gray: {
+          DEFAULT: '#627C85',
+        },
+        blue: {
+          DEFAULT: '#454457',
+          light: '#78DCE8',
+        },
+        orange: {
+          DEFAULT: '#E78277',
+        },
+        pink: {
+          DEFAULT: '#E15B68',
+          bright: '#FF2BEA',
+        },
+        purple: {
+          DEFAULT: '#C1495D',
+        },
+        grayTones: {
+          50: '#F3F7FA',
+          100: '#E2EAF2',
+          200: '#BBC5CF',
+          300: '#9AA5AF',
+          400: '#78838E',
+          500: '#67707A',
+          600: '#465058',
+        },
       },
     },
     spacing: {
@@ -63,7 +102,8 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
-      50: '50vh',
+      '50h': '50vh',
+      '50w': '50vw',
     },
     animation: {
       none: 'none',
@@ -119,11 +159,14 @@ module.exports = {
       xl: '0.75rem',
       '2xl': '1rem',
       '3xl': '1.5rem',
+      '4xl': '2rem',
+      '5xl': '5rem',
       full: '9999px',
     },
     borderWidth: {
       DEFAULT: '1px',
       0: '0px',
+      1: '1px',
       2: '2px',
       4: '4px',
       8: '8px',
@@ -173,7 +216,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Karla',
+        'hero-new',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
@@ -189,8 +232,8 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: [
-        'Spectral',
+      display: [
+        'novecento-sans-wide',
         '"Times New Roman"',
         'Georgia',
         'ui-serif',
@@ -199,7 +242,7 @@ module.exports = {
         'serif',
       ],
       mono: [
-        'Monaco',
+        'pt-mono',
         'ui-monospace',
         'SFMono-Regular',
         'Menlo',
@@ -218,11 +261,11 @@ module.exports = {
       '2xl': ['1.5rem', { lineHeight: '2rem' }],
       '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
       '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-      '5xl': ['3rem', { lineHeight: '1' }],
-      '6xl': ['3.75rem', { lineHeight: '1' }],
-      '7xl': ['4.5rem', { lineHeight: '1' }],
-      '8xl': ['6rem', { lineHeight: '1' }],
-      '9xl': ['8rem', { lineHeight: '1' }],
+      '5xl': ['3rem', { lineHeight: '120%' }],
+      '6xl': ['3.75rem', { lineHeight: '120%' }],
+      '7xl': ['4.5rem', { lineHeight: '120%' }],
+      '8xl': ['6rem', { lineHeight: '120%' }],
+      '9xl': ['8rem', { lineHeight: '120%' }],
     },
     fontWeight: {
       thin: '100',
@@ -665,6 +708,7 @@ module.exports = {
       colors: 'background-color, border-color, color, fill, stroke',
       opacity: 'opacity',
       shadow: 'box-shadow',
+      height: 'height, margin, padding',
       transform: 'transform',
     },
     transitionTimingFunction: {
@@ -920,5 +964,8 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+  ],
 };
