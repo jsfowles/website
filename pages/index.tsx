@@ -7,7 +7,7 @@ const Home = () => {
       <figure className="mobile-image-fade brighten transform -scale-x-1 md:mb-0 -mb-20">
         <img
           src="/images/nothisone.png"
-          className="md:shadowed w-full  md:h-full h-[50vh] object-contain object-bottom md:pt-16 pt-20"
+          className="md:shadowed w-full  md:h-full h-[65vh] object-contain object-bottom md:pt-16 pt-20"
         />
       </figure>
       <div className="transition-height duration-500 ease-in-out md:w-2/3 flex flex-col justify-center items-center self-center relative text-white">

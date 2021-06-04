@@ -7,7 +7,7 @@ const Home = () => {
       <figure className="transform md:mb-0 -mb-20">
         <img
           src="/images/whole-fam-trimmy.png"
-          className="mobile-image-fade md:shadowed w-[60vw] h-full self-end object-contain lg:object-bottom object-center  md:pt-16 pt-20"
+          className="mobile-image-fade md:shadowed md:w-[60vw] h-full self-end object-contain lg:object-bottom object-center  md:pt-16 pt-20"
         />
       </figure>
       <div className="transition-height duration-500 ease-in-out w-full flex flex-col justify-center items-center self-center relative text-white">
