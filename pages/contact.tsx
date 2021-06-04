@@ -3,7 +3,7 @@ import ReactRotatingText from 'react-rotating-text';
 
 const Home = () => {
   return (
-    <div className="md:h-[520px]  flex md:flex-row flex-col relative pb-10 pt-36 md:pt-0">
+    <div className="md:h-[520px]  flex md:flex-row flex-col relative pb-10 pt-28 md:pt-0">
       <figure className="brighten md:w-2/3 w-full md:px-16 px-10 grid self-center content-center pb-10 md:pb-0">
         <div className="aspect-w-1 aspect-h-1  ">
           <img
