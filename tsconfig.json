@@ -19,6 +19,7 @@
       "@containers/*": ["src/containers/*"],
       "@components/*": ["src/components/*"],
       "@typings/*": ["src/types/*"],
+      "@context/*": ["src/context/*"],
       "@hooks/*": ["src/hooks/*"],
       "@lib/*": ["src/lib/*"],
       "@theme/*": ["src/theme/*"],

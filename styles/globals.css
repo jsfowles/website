@@ -29,7 +29,9 @@ a {
   -webkit-filter: drop-shadow(50px 50px 50px #c1495d);
   filter: drop-shadow(50px -80px 150px #c1495d);
 }
-
+* {
+  cursor: none;
+}
 a:hover:after {
   left: 0;
   width: 100%;

@@ -13,27 +13,17 @@ const navItems = [
 const wrapperVariants = {
   initial: {
     opacity: 0,
-    // clipPath: 'polygon(100% 0%,0% 0%,0% 0%,100% 100%)',
-    // width: '100%',
-    // x: '100%',
   },
   animate: {
     opacity: 1,
-    // clipPath: 'polygon(100% 0%,0% 0%,0% 100%,100% 100%)',
     transition: {
       duration: 0.7,
       staggerChildren: 0.07,
       delayChildren: 0.5,
     },
-    // width: '100%',
-    // x: '0%',
   },
   exit: {
     opacity: 0,
-    // clipPath: 'polygon(100% 0%,0% 0%,0% 0%,100% 100%)',
-    // transition: { duration: 0.7 },
-    // width: '100%',
-    // x: '100%',
   },
 };
 
@@ -83,7 +73,7 @@ const Navigation = () => {
       <AnimatePresence>
         {toggleNav && (
           <motion.ul
-            key="card"
+            key="nav"
             variants={wrapperVariants}
             initial="initial"
             animate="animate"

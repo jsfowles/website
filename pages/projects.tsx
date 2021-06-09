@@ -1,6 +1,49 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
 
+const data = [
+  {
+    id: 0,
+    title: 'Chase Bliss / Blooper',
+    route: 'https://blooper.chaseblissaudio.com',
+  },
+  {
+    id: 1,
+    title: 'Droping',
+    route: 'https://dropin.underbelly.is',
+  },
+  {
+    id: 2,
+    title: 'Reachcast',
+    route: 'https://reachcast.io',
+  },
+  {
+    id: 3,
+    title: 'Boosted Boards',
+    route: 'https://boostedboards.com',
+  },
+  {
+    id: 4,
+    title: 'CRV',
+    route: 'https://crv.com',
+  },
+  {
+    id: 5,
+    title: 'The Farmhouse',
+    route: 'https://farmhouse.fowles.dev',
+  },
+  {
+    id: 6,
+    title: 'Old Site',
+    route: 'https://jsfowles.netlify.app',
+  },
+  {
+    id: 7,
+    title: 'Old Old Site',
+    route: 'https://old-old-jsfowles.netlify.app',
+  },
+];
+
 const Home = () => {
   return (
     <div className="md:h-[520px]  flex md:flex-row flex-col relative pb-10 pt-32 md:pt-0">
@@ -13,34 +56,13 @@ const Home = () => {
       <div className="w-full md:w-2/3 flex flex-col justify-center items-center self-center relative text-white">
         <div className="w-full md:px-24 px-10">
           <ul className="prose-lg text-white font-mono uppercase">
-            <li>
-              <a href="https://blooper.chaseblissaudio.com/">
-                Chase Bliss / Blooper
-              </a>
-            </li>
-            <li>
-              <a href="https://dropin.underbelly.is/">Dropin</a>
-            </li>
-            <li>
-              <a href="https://www.reachcast.io/">Reachcast</a>
-            </li>
-            <li>
-              <a href="https://underbelly.is/making-it-awesome-with/boosted-boards">
-                Boosted Boards
-              </a>
-            </li>
-            <li>
-              <a href="https://crv.com">CRV</a>
-            </li>
-            <li>
-              <a href="https://farmhouse.fowles.dev">The Farmhouse</a>
-            </li>
-            <li>
-              <a href="https://jsfowles.netlify.app">Old Site</a>
-            </li>
-            <li>
-              <a href="https://old-old-jsfowles.netlify.app">Old Old Site</a>
-            </li>
+            {data.map(({ id, title, route }) => (
+              <li key={id}>
+                <a href={route} target="_blank">
+                  {title}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

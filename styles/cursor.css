@@ -1,0 +1,64 @@
+.circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+  will-change: width, height, transform, border;
+  z-index: 900;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  filter: saturate(100%) brightness(100%) contrast(100%);
+  opacity: 0.75;
+  @apply bg-gradient-to-b from-orange via-pink to-blue opacity-50 shadow-2xl;
+}
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+.circle.hovered {
+  width: 50px;
+  height: 50px;
+  border-width: 3px;
+  border-color: lightgray;
+}
+
+.circle.nav {
+  width: 300px;
+  height: 300px;
+  border: none;
+  @apply bg-gradient-to-b from-orange via-pink to-blue opacity-50 shadow-2xl;
+}
+
+.circle.menu {
+  width: 100px;
+  height: 100px;
+
+  @apply bg-gradient-to-t from-orange via-pink to-blue opacity-50 shadow-2xl;
+}
+
+.circle.jsfowles {
+  width: 200px;
+  height: 200px;
+
+  @apply bg-gradient-to-t from-orange via-pink to-blue opacity-50 shadow-2xl;
+}
+
+.dot.hovered {
+  display: none;
+}
