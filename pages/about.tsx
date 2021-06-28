@@ -17,7 +17,7 @@ const Home = () => {
           }}
           exit={{ opacity: 0 }}
           src="/images/whole-fam-trimmy.png"
-          className="mobile-image-fade md:shadowed md:w-[60vw] w-full gsh-full self-end object-contain lg:object-bottom object-center  md:pt-16 pt-20"
+          className="mobile-image-fade md:shadowed w-full md:w-[50vw]  h-full md:self-end object-contain lg:object-bottom object-center  md:pt-16 pt-20"
         />
       </figure>
       <div className="w-full flex flex-col justify-center items-center self-center relative text-white">
@@ -50,7 +50,7 @@ const Home = () => {
             learning machines.
           </motion.p>
 
-          <motion.p variants={item} className="text-white prose pt-6">
+          <motion.p variants={item} className="text-white prose pt-6 bg-pink-bright">
             Lover of my wife and two kids, fly-fishing, and guitars.
           </motion.p>
           <motion.p variants={item} className="text-white prose pt-6">

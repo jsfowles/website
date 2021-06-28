@@ -52,7 +52,9 @@ const Navigation = () => {
       <div className="w-1/3">
         <Link passHref href="/">
           <motion.h4
+            // @ts-ignore
             onMouseEnter={() => cursorChangeHandler('jsfowles')}
+            // @ts-ignore
             onMouseLeave={() => cursorChangeHandler('')}
             variants={item}
             className="text-center pt-4 text-lg uppercase text-white"
@@ -64,7 +66,9 @@ const Navigation = () => {
       <ul className="p-8 w-2/3 flex justify-center pt-4">
         {navItems.map(({ route, id, title }) => (
           <motion.li
+            // @ts-ignore
             onMouseEnter={() => cursorChangeHandler('menu')}
+            // @ts-ignore
             onMouseLeave={() => cursorChangeHandler('')}
             variants={item}
             className="uppercase pl-8 text-white"

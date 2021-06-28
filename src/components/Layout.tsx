@@ -32,8 +32,10 @@ const Layout = ({ children }) => {
     <>
       <div className="md:block hidden absolute top-8 right-[5vw] text-center">
         <div
-          className="group flex items-center"
+          className="group flex items-center relative justify-center"
+          // @ts-ignore
           onMouseEnter={() => cursorChangeHandler('nav')}
+          // @ts-ignore
           onMouseLeave={() => cursorChangeHandler('')}
         >
           <button className="animate text-sm font-display bg-auto text-white relative transform group-hover:translate-x-5 border-cyan-500 border-1 rounded-md h-12 px-2 z-50">
@@ -44,6 +46,29 @@ const Layout = ({ children }) => {
                 href="https://playground.jsfowles.com"
               >
                 Playground
+              </a>
+            </p>
+          </button>
+          <span className="h-2/5 animate group-hover:bg-white w-[1px] absolute left-0 rounded-full z-10" />
+          <span className="h-3/5 animate group-hover:bg-white w-[1px] absolute left-1.5 rounded-full z-10" />
+          <span className="h-4/5 animate group-hover:bg-white w-[1px] absolute left-3 rounded-full z-10" />
+        </div>
+
+        <div
+          className="group flex items-center relative mt-4"
+          // @ts-ignore
+          onMouseEnter={() => cursorChangeHandler('nav')}
+          // @ts-ignore
+          onMouseLeave={() => cursorChangeHandler('')}
+        >
+          <button className="animate text-sm font-mono bg-auto text-white relative transform group-hover:translate-x-5 border-cyan-500 border-1 rounded-md h-12 px-2 z-50">
+            <p className="uppercase pt-1">
+              <a
+                className="no-hover"
+                target="_blank"
+                href="http://belly.is/UvduFg"
+              >
+                puts foo, bar
               </a>
             </p>
           </button>
