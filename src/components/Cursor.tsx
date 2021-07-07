@@ -7,7 +7,7 @@ const Cursor = () => {
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
 
   const { x, y } = useMousePosition();
-  console.log(cursorType, 'type');
+
   return (
     <>
       <div

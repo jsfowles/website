@@ -37,7 +37,7 @@ const item = {
 
 const Navigation = () => {
   const [toggleNav, setToggleNav] = React.useState(false);
-  console.log(toggleNav);
+
   return (
     <nav className="md:hidden absolute top-0 left-0 right-0 p-9 z-50 flex w-full justify-between items-center">
       <Link passHref href="/">
