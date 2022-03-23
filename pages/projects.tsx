@@ -30,7 +30,7 @@ const data = [
   {
     id: 5,
     title: 'The Farmhouse',
-    route: 'https://farmhouse.fowles.dev',
+    route: 'https://farmhouseflorist.netlify.app/',
   },
   {
     id: 6,
